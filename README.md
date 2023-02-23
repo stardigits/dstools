@@ -26,7 +26,7 @@ DSTools\src
 * Git 2.39.2 - https://github.com/git-for-windows/git/releases/download/v2.39.2.windows.1/PortableGit-2.39.2-64-bit.7z.exe
 
 ## To run
-1. Download all the source files and exctract one by one in the folder <Drive>:\DSTools or Download and Extrect the archive file dstools-x.x.x.7z
+1. Download all the source files and exctract one by one in the folder <Drive>:\DSTools or Download and Extract the archive file dstools-x.x.x.7z
 2. Open Windows command prompt
 3. Change directory to DSTools folder and run `dstools.cmd` to setup Windows environment
 4. Run from Windows terminal: java, javac, git, spark-shell, scala, python, etc. 
