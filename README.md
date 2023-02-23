@@ -1,4 +1,4 @@
-# dstools
+# DSTools
 
 Windows Data Science Tools
 
