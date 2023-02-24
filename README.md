@@ -24,9 +24,11 @@ DSTools\src
 * Scala 2.13 - https://downloads.lightbend.com/scala/2.13.0/scala-2.13.0.zip
 * R 4.2.1 - https://cran.microsoft.com/snapshot/2022-10-15/bin/windows/base/R-4.2.1-win.exe
 * Git 2.39.2 - https://github.com/git-for-windows/git/releases/download/v2.39.2.windows.1/PortableGit-2.39.2-64-bit.7z.exe
+* Winutils for hadoop-3.2.2 - https://github.com/cdarlint/winutils/blob/master/hadoop-3.2.2/bin/winutils.exe
 
 ## To run
 1. Download all the source files and exctract one by one in the folder <Drive>:\DSTools or Download and Extract the archive file dstools-x.x.x.7z
-2. Open Windows command prompt
-3. Change directory to DSTools folder and run `dstools.cmd` to setup Windows environment
-4. Run from Windows terminal: java, javac, git, spark-shell, scala, python, etc. 
+2. Copy winutils.exe to `spark/bin` folder
+3. Open Windows command prompt
+4. Change directory to DSTools folder and run `dstools.cmd` to setup Windows environment
+5. Run from Windows terminal: java, javac, git, spark-shell, scala, python, etc. 
