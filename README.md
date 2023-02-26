@@ -46,3 +46,10 @@ print(spark.version)
 spark.stop
 ```
 
+## Scala kernel in Jupyter Notebook
+
+Source: https://www.geeksforgeeks.org/how-to-install-scala-kernal-in-jupyter/   
+1. Run `pip install spylon-kernel`
+2. Run `python -m spylon_kernel install`
+3. Run `jupyter notebook`
+
