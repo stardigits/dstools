@@ -53,3 +53,17 @@ Source: https://www.geeksforgeeks.org/how-to-install-scala-kernal-in-jupyter/
 2. Run `python -m spylon_kernel install`
 3. Run `jupyter notebook`
 
+## Additional python libraries
+
+```
+pip install transformers
+pip install timm
+```
+
+## Machine Learning
+
+https://github.com/huggingface/transformers
+
+## AI Community
+
+https://huggingface.co/
