@@ -32,3 +32,17 @@ DSTools\src
 3. Open Windows command prompt
 4. Change directory to DSTools folder and run `dstools.cmd` to setup Windows environment
 5. Run from Windows terminal: java, javac, git, spark-shell, scala, python, etc. 
+
+## Pyspark
+
+Install pypark-3.2.3
+`pip install pyspark==3.2.3`
+
+Testing
+```python
+from pyspark.sql import SparkSession
+spark = SparkSession.builder.getOrCreate()
+print(spark.version)
+spark.stop
+```
+
