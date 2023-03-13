@@ -27,7 +27,7 @@ DSTools\src
 * Winutils for hadoop-2.7.7 - https://github.com/cdarlint/winutils/blob/master/hadoop-2.7.7/bin/winutils.exe
 
 Additional:
-* Hadoop 2.7.7 - https://archive.apache.org/dist/hadoop/common/hadoop-2.7.7/hadoop-2.7.7.tar.gz
+* Hadoop 3.3.0 - https://archive.apache.org/dist/hadoop/common/hadoop-2.7.7/hadoop-3.3.0.tar.gz
 * Hive 3.1.3 - https://dlcdn.apache.org/hive/hive-3.1.3/apache-hive-3.1.3-bin.tar.gz
 
 ## To run
@@ -40,6 +40,7 @@ Additional:
 ## Upgrade to Hadoop 3.3.0 & Spark 3.3.2
   
 1. Download Hadoop 3.3.0 & Spark 3.3.2
+Download the binary files from https://github.com/stardigits/dstools/releases/download/v3.10.9/upgrade_hadoop-3.3.0_spark-3.3.2.7z
 Extract to `DSTOOLS\bin` directory, rename folder with `hadoop` and `spark`
 
 2. Edit `dstools.cmd`, add following text line after spark environment setting
