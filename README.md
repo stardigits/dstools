@@ -9,6 +9,8 @@ Portable windows application (no installation required) for Data Science tasks
 * Python
 * R
 * Git
+* Hadoop
+* Hive (in development & test)
 
 
 ## Directory Structure
