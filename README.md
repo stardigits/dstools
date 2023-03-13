@@ -26,6 +26,10 @@ DSTools\src
 * Git 2.39.2 - https://github.com/git-for-windows/git/releases/download/v2.39.2.windows.1/PortableGit-2.39.2-64-bit.7z.exe
 * Winutils for hadoop-2.7.7 - https://github.com/cdarlint/winutils/blob/master/hadoop-2.7.7/bin/winutils.exe
 
+Additional:
+* Hadoop 2.7.7 - https://archive.apache.org/dist/hadoop/common/hadoop-2.7.7/hadoop-2.7.7.tar.gz
+* Hive 3.1.3 - https://dlcdn.apache.org/hive/hive-3.1.3/apache-hive-3.1.3-bin.tar.gz
+
 ## To run
 1. Download all the source files and exctract one by one in the folder <Drive>:\DSTools or Download and Extract the archive file dstools-x.x.x.7z
 2. Copy winutils.exe to `spark/bin` folder
