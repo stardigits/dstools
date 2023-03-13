@@ -37,16 +37,75 @@ Additional:
 4. Change directory to DSTools folder and run `dstools.cmd` to setup Windows environment
 5. Run from Windows terminal: java, javac, git, spark-shell, scala, python, etc. 
 
-## Hadoop
+## Upgrade to Hadoop 3.3.0 & Spark 3.3.2
   
-Edit `dstools.cmd`, add following text line after spark environment setting
+1. Download Hadoop 3.3.0 & Spark 3.3.2
+Extract to `DSTOOLS\bin` directory, rename folder with `hadoop` and `spark`
+
+2. Edit `dstools.cmd`, add following text line after spark environment setting
 ```
+rem spark
+set SPARK_HOME=%DSTOOLSDIR%\bin\spark
+set PYSPARK_PYTHON=python
+
 rem hadoop
 set HADOOP_HOME=%DSTOOLSDIR%\bin\hadoop
 set HADOOP_CONF_DIR=%HADOOP_HOME%\etc\hadoop
 set YARN_CONF_DIR=%HADOOP_CONF_DIR%
 set PATH=%HIVE_HOME%\bin;%HADOOP_HOME%\bin;%HADOOP_HOME%\sbin;%PATH%
+
+rem hive
+set HIVE_HOME=%DSTOOLSDIR%\bin\hive
+
+rem R & git
+rem set PATH=%SPARK_HOME%\bin;%SCALA_HOME%\bin;%DSTOOLSDIR%\bin\R\bin\x64;%DSTOOLSDIR%\bin\winpython\scripts;%PATH%
+set PATH=%SPARK_HOME%\bin;%SCALA_HOME%\bin;%DSTOOLSDIR%\bin\R\bin\x64;%DSTOOLSDIR%\bin\git;%DSTOOLSDIR%\bin\git\bin;%PATH%
+
+rem winpython
+%DSTOOLSDIR%\bin\winpython\scripts\env.bat
+
 %HADOOP_HOME%\etc\hadoop\hadoop-env.cmd
+```
+
+3. Update pyspark
+```
+pip install pyspark==3.3.2
+```
+
+4. Check the installation
+```
+C:\>hadoop version
+Hadoop 3.3.0
+Source code repository https://gitbox.apache.org/repos/asf/hadoop.git -r aa96f1871bfd858f9bac59cf2a81ec470da649af
+Compiled by brahma on 2020-07-06T18:44Z
+Compiled with protoc 3.7.1
+From source with checksum 5dc29b802d6ccd77b262ef9d04d19c4
+This command was run using /C:/DSTools/bin/hadoop/share/hadoop/common/hadoop-common-3.3.0.jar
+
+C:\Users\LabUser>spark-shell
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+Welcome to
+      ____              __
+     / __/__  ___ _____/ /__
+    _\ \/ _ \/ _ `/ __/  '_/
+   /___/ .__/\_,_/_/ /_/\_\   version 3.3.2
+      /_/
+
+Using Scala version 2.13.8 (Java HotSpot(TM) 64-Bit Server VM, Java 1.8.0_202)
+Type in expressions to have them evaluated.
+Type :help for more information.
+Spark context Web UI available at http://DESKTOP-BT4131D:4040
+Spark context available as 'sc' (master = local[*], app id = local-1678730316346).
+Spark session available as 'spark'.
+
+scala>
+```
+
+5. Init & Run Hadoop before running Spark / Pyspark after updating `etc\hadoop` xml config files
+```
+hadoop namenode -format
+start-dfs
 ```
 
 ## Pyspark
