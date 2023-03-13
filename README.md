@@ -37,6 +37,18 @@ Additional:
 4. Change directory to DSTools folder and run `dstools.cmd` to setup Windows environment
 5. Run from Windows terminal: java, javac, git, spark-shell, scala, python, etc. 
 
+## Hadoop
+  
+Edit `dstools.cmd`, add following text line after spark environment setting
+```
+rem hadoop
+set HADOOP_HOME=%DSTOOLSDIR%\bin\hadoop
+set HADOOP_CONF_DIR=%HADOOP_HOME%\etc\hadoop
+set YARN_CONF_DIR=%HADOOP_CONF_DIR%
+set PATH=%HIVE_HOME%\bin;%HADOOP_HOME%\bin;%HADOOP_HOME%\sbin;%PATH%
+%HADOOP_HOME%\etc\hadoop\hadoop-env.cmd
+```
+
 ## Pyspark
 
 Install pypark-3.0.3
