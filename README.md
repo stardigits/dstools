@@ -108,6 +108,16 @@ scala>
 ```
 
 5. Init & Run Hadoop before running Spark / Pyspark after updating `etc\hadoop` xml config files
+`hdfs-site.xml`, replace with the correct drive folder.
+```
+<configuration>
+ <property><name>dfs.replication</name><value>1</value></property> 
+ <property><name>dfs.namenode.name.dir</name><value>file:///C:/DSTools/data/namenode</value><final>true</final></property> 
+ <property><name>dfs.datanode.data.dir</name><value>file:///C:/DSTools/data/datanode</value><final>true</final></property>
+</configuration>
+```
+
+Run
 ```
 hadoop namenode -format
 start-dfs
@@ -118,7 +128,7 @@ start-dfs
 Requirements:
 1. MINGW64
 2. Hadoop which should be able to run in MINGW64
-Update hadoop `hadoop-env.sh`
+Update hadoop `hadoop-env.sh` in folder `$HOME_HADOOP/etc/hadoop/`
 ```
 HADOOP_OS_TYPE=CYGWIN
 ```
