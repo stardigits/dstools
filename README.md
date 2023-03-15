@@ -2,7 +2,7 @@
 
 Windows Data Science Tools
 
-Portable windows application (no installation required) for Data Science tasks
+Portable windows application (no installation required & no windows administrator permission required) for Data Science tasks
 * Java
 * Scala
 * Spark
@@ -10,13 +10,13 @@ Portable windows application (no installation required) for Data Science tasks
 * R
 * Git
 * Hadoop
-* Hive (in development & test)
+* Hive (in development & test using MINGW64 from Git package)
 
 
 ## Directory Structure
 ```
-DSTools\bin
-DSTools\src
+DSTools\bin - All binary packages files & directories
+DSTools\data - For hadoop
 ```
 
 ## Source Files for release v3.10.9
@@ -110,6 +110,65 @@ scala>
 hadoop namenode -format
 start-dfs
 ```
+
+## Hive
+
+Requirements:
+1. MINGW64
+2. Hadoop which should be able to run in MINGW64
+Update hadoop `hadoop-env.sh`
+```
+HADOOP_OS_TYPE=CYGWIN
+```
+
+3. Environment file `hadoop-hive-env.sh`
+```
+export DSTOOLS_HOME=/c/DSTools
+
+# JAVA
+export JAVA_HOME=$DSTOOLS_HOME/bin/jdk
+export JDK_HOME=$DSTOOLS_HOME/bin/jdk
+export JRE_HOME=$DSTOOLS_HOME/bin/jdk/jre
+export CLASSPATH=.:$JDK_HOME/lib:$JRE_HOME/lib
+export PATH=$PATH:$JAVA_HOME/bin
+
+# HADOOP
+export HADOOP_HOME=$DSTOOLS_HOME/bin/hadoop
+export HADOOP_COMMON_HOME=$HADOOP_HOME
+export HADOOP_COMMON_DIR=share/hadoop/common
+export HADOOP_COMMON_LIB_JARS_DIR=share/hadoop/common/lib/
+export HADOOP_COMMON_LIB_NATIVE_DIR=lib/native
+export HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop
+export HADOOP_TOOLS_HOME=$HADOOP_HOME
+export HADOOP_TOOLS_DIR=share/hadoop/tools
+export HADOOP_TOOLS_LIB_JARS_DIR=share/hadoop/tools/lib
+export PATH=$PATH:$HADOOP_HOME/sbin:$HADOOP_HOME/bin
+
+# HIVE
+export HIVE_HOME=$DSTOOLS_HOME/bin/hive
+export PATH=$PATH:$HIVE_HOME/bin
+
+# PATH
+export CLASSPATH=.:/c/DSTools/bin/jdk/lib:/c/DSTools/bin/jdk/jre/lib
+```
+
+Installation:
+1. Download and extract in `DSTools\bin` and rename into `DSTools\bin\hive`
+2. Test Hadoop in MINGW64, type `bash` in Windows prompt
+```
+$ . hadoop-hive-env.sh
+$ hadoop version
+Hadoop 3.3.0
+Source code repository https://gitbox.apache.org/repos/asf/hadoop.git -r aa96f1871bfd858f9bac59cf2a81ec470da649af
+Compiled by brahma on 2020-07-06T18:44Z
+Compiled with protoc 3.7.1
+From source with checksum 5dc29b802d6ccd77b262ef9d04d19c4
+This command was run using /C:/DSTools/bin/hadoop/share/hadoop/common/hadoop-common-3.3.0.jar
+```
+
+Running Hive:
+1. Run `bash` to enter into MINGW64 environment and prompt
+
 
 ## Pyspark
 
