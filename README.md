@@ -23,12 +23,14 @@ DSTools\data - For hadoop
 * Java 1.8-202 - [https://www.oracle.com/java/technologies/javase/javase8-archive-downloads.html](https://mirrors.huaweicloud.com/java/jdk/8u202-b08/jdk-8u202-windows-x64.exe)
 * Winpython 3.10.9 - https://github.com/winpython/winpython/releases/download/5.3.20221233/Winpython64-3.10.9.0.exe
 * Spark 3.0.3 (Hadoop 2.7) - https://archive.apache.org/dist/spark/spark-3.0.3/spark-3.0.3-bin-hadoop3.2.tgz
+* Winutils for hadoop-2.7.7 - https://github.com/cdarlint/winutils/blob/master/hadoop-2.7.7/bin/winutils.exe
 * Scala 2.13 - https://downloads.lightbend.com/scala/2.13.0/scala-2.13.0.zip
 * R 4.2.1 - https://cran.microsoft.com/snapshot/2022-10-15/bin/windows/base/R-4.2.1-win.exe
 * Git 2.39.2 - https://github.com/git-for-windows/git/releases/download/v2.39.2.windows.1/PortableGit-2.39.2-64-bit.7z.exe
-* Winutils for hadoop-2.7.7 - https://github.com/cdarlint/winutils/blob/master/hadoop-2.7.7/bin/winutils.exe
 
-Additional:
+Additional for upgrade:
+* Spark 3.3.2 (Hadoop 3.x) - https://www.apache.org/dyn/closer.lua/spark/spark-3.3.2/spark-3.3.2-bin-hadoop3.tgz
+* Winutils for hadoop-3.3.0 - https://github.com/sunboyqing/winutils3.3.0/archive/refs/heads/master.zip
 * Hadoop 3.3.0 - https://archive.apache.org/dist/hadoop/common/hadoop-2.7.7/hadoop-3.3.0.tar.gz
 * Hive 3.1.3 - https://dlcdn.apache.org/hive/hive-3.1.3/apache-hive-3.1.3-bin.tar.gz
 
