@@ -33,6 +33,8 @@ Additional for upgrade:
 * Winutils for hadoop-3.3.0 - https://github.com/sunboyqing/winutils3.3.0/archive/refs/heads/master.zip
 * Hadoop 3.3.0 - https://archive.apache.org/dist/hadoop/common/hadoop-2.7.7/hadoop-3.3.0.tar.gz
 * Hive 3.1.3 - https://dlcdn.apache.org/hive/hive-3.1.3/apache-hive-3.1.3-bin.tar.gz
+* Duckdb 0.7.1 - https://github.com/duckdb/duckdb/releases/download/v0.7.1/duckdb_cli-windows-amd64.zip
+* Tad 0.12.0 - https://github.com/antonycourtney/tad/releases/download/v0.12.0/Tad-Setup-0.12.0.exe
 
 ## To run
 1. Download all the source files and exctract one by one in the folder <Drive>:\DSTools or Download and Extract the archive file dstools-x.x.x.7z
